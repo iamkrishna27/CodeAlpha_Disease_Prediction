@@ -1,0 +1,12 @@
+# React / Node
+client/node_modules/
+client/dist/
+.env
+
+# Python / FastAPI
+backend/venv/
+backend/__pycache__/
+*.pyc
+
+# OS Files
+.DS_Store
