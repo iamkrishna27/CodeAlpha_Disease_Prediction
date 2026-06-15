@@ -26,7 +26,7 @@ const Auth = () => {
         ? { email, password } 
         : { email, password, first_name: firstName, last_name: lastName, gender };
 
-      const response = await fetch(`http://127.0.0.1:8000${endpoint}`, {
+      const response = await fetch(`https://medcore-os.onrender.com${endpoint}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

@@ -26,7 +26,7 @@ const ParkinsonsForm = () => {
     setIsUploading(true); setError(null);
     try {
       const payload = new FormData(); payload.append("file", file);
-      const res = await fetch('http://127.0.0.1:8000/upload/report', { method: 'POST', body: payload });
+      const res = await fetch('https://medcore-os.onrender.com/upload/report', { method: 'POST', body: payload });
       if (!res.ok) throw new Error('OCR Failed');
       const data = await res.json();
       if (data.extracted_data && Object.keys(data.extracted_data).length > 0) {
@@ -40,7 +40,7 @@ const ParkinsonsForm = () => {
     e.preventDefault();
     setIsLoading(true); setError(null); setResult(null);
     try {
-      const res = await fetch('http://127.0.0.1:8000/predict/parkinsons', {
+      const res = await fetch('https://medcore-os.onrender.com/predict/parkinsons', {
         method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(formData),
       });
       if (!res.ok) throw new Error('Prediction core failed.');
@@ -51,7 +51,7 @@ const ParkinsonsForm = () => {
 
   const handleDownloadReport = async () => {
     try {
-      const res = await fetch('http://127.0.0.1:8000/download/report', {
+      const res = await fetch('https://medcore-os.onrender.com/download/report', {
         method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ ...result, vitals: formData })
       });
       if (!res.ok) throw new Error('PDF Generation failed');
