@@ -1,6 +1,11 @@
 # MED-CORE OS
 **An AI-Driven Healthcare Diagnostic and Explainable AI System**
 
+## 🌐 Live Demo & Access
+**Live Enterprise Dashboard:** [https://medcore-dashboard.onrender.com](https://medcore-dashboard.onrender.com)
+
+*(Note: The backend inference engine is hosted on a free ephemeral cloud server. The first prediction request may take 40-50 seconds as the server wakes up from a cold start. Subsequent scans will be instantaneous).*
+
 ## 1. Project Objective
 The primary objective of this project is to develop a secure, intelligent, and transparent medical diagnostic support system. By integrating Machine Learning algorithms with Explainable AI (XAI) and Optical Character Recognition (OCR), the system aims to assist healthcare professionals in predicting high-risk diseases while providing clear, interpretable reasoning for its predictions.
 
